@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% set title = 'Home' %}
+{% block content %}
+
+<h1>Welcome home!</h1>
+<br>
+<a href="/logout" class="btn btn-primary">Logout</a>
+<br><br>
+<h2>List of users:</h2>
+<ul>
+    {% for user in users %}
+        <li>{{ user.name }}</li>
+    {% else %}
+        <li> Users list is empty </li>
+    {% endfor %}
+</ul>
+{% endblock %}
